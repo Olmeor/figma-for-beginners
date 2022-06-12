@@ -739,3 +739,48 @@ body { /* первоначальные настройки для тела сай
 }
 
 /* Places styles end */
+
+/* Tours styles start */
+
+.tours {
+  margin-bottom: 139px;
+}
+
+.tours_tour {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+
+.tour_info {
+  padding-left: 47px;
+}
+
+.tour_title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 85px;
+}
+
+.tour_desc {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 58px;
+}
+
+.tour_more {
+  font-size: 16px;
+  color: #006DFE;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+}
+
+.tour_more:hover, .tour_more:focus {
+  opacity: .65;
+}
+
+/* Tours styles end */
