@@ -424,7 +424,7 @@ body { /* первоначальные настройки для тела сай
 }
 
 .wrapper-full { /* для блока places */
-  max-width: 1262;
+  max-width: 1262px;
   margin: 0 auto;
 }
 
@@ -487,7 +487,7 @@ body { /* первоначальные настройки для тела сай
 }
 
 .header_link:hover, .header_link:focus, .header_link:active {
-  opacity: .75;
+  opacity: .75; /* добавление прозрачности */
 }
 
 /* Header styles end */
@@ -499,6 +499,7 @@ body { /* первоначальные настройки для тела сай
   background: url(../img/intro-bg.jpg) no-repeat center; /* без повторений по центру*/
   background-size: cover; /* полностью покрывать при любом масштабе */
   padding-top: 263px;
+  padding-bottom: 223px;
 }
 
 .intro_title { /* заголовок */
@@ -563,6 +564,7 @@ body { /* первоначальные настройки для тела сай
 .benefits {
   margin-bottom: 131px;
 }
+
 .benefits_wrap {
   max-width: 1262px;
   background-color: #fff;
@@ -615,7 +617,7 @@ body { /* первоначальные настройки для тела сай
 .benefits_card-desc {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 39;
+  margin-bottom: 39px;
 }
 
 .benefits_card-more { /* ссылка + стрелка + анимация стрелки*/
@@ -626,7 +628,7 @@ body { /* первоначальные настройки для тела сай
   color: #006DFE;
   text-decoration: none;
   background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
-  transition: .2;
+  transition: .2s;
   /* background-size: ; размер в данном случае = размер картинки */
 }
 
@@ -638,6 +640,9 @@ body { /* первоначальные настройки для тела сай
 
 /* Places styles start */
 
+.places {
+  margin-bottom: 131px;
+}
 .places_caption { /* заголовок и ссылка  VIEW ALL */
   display: flex;
   flex-wrap: wrap;
@@ -671,6 +676,7 @@ body { /* первоначальные настройки для тела сай
 
 .places_card { /* интерактивность картинок */
   position: relative;
+  overflow: hidden; /* края прятать при увеличении при наведении */
 }
 
 .places_card::after {
@@ -685,27 +691,51 @@ body { /* первоначальные настройки для тела сай
   z-index: 2; /* порядок слоя */
 }
 
+.places_card:hover .places_card-pic {
+  transform: scale(1.05); /* увеличение при наведении */
+
+}
+
 .places_card-title {
   font-size: 50px;
   line-height: 60px;
   color: white;
   position: absolute;
   bottom: 27px;
-  left: 29;
+  left: 29px;
   z-index: 3; /* порядок слоя */
 }
 
-.places_card_size_lg {
+.places_card_size_lg { /* ширина по количеству ячеек в сетке */
   grid-column: span 3;
+}
+
+.places_card_size_sm { /* ширина по количеству ячеек в сетке */
+  grid-column: span 2;
 }
 
 .places_card-pic { /* если картинки разных размеров */
   width: 100%;
+  transition: .15s all; /* плавность при увеличении при наведении */
+}
+
+.places_card_size_lg {
   height: 354px; /* выравниваем по высоте */
   object-fit: cover; /* масштаб в центр за счет краев */
 }
 
+.places_card_size_sm {
+  height: 283px; /* выравниваем по высоте */
+  object-fit: cover; /* масштаб в центр за счет краев */
+}
 
-
+.places_card-link { /* Указатель при клике */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
 
 /* Places styles end */
