@@ -458,6 +458,13 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  transition: 0.2s linear; /*плавный переход шторки */
+  padding-bottom: 20px; /* отступ под меню для красоты */
+  z-index: 999;
+}
+
+.header_active {
+  background: #0e1d28;
 }
 
 .header_wrapper {
