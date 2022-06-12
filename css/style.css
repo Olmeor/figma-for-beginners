@@ -635,3 +635,77 @@ body { /* первоначальные настройки для тела сай
 }
 
 /* Benefits styles end */
+
+/* Places styles start */
+
+.places_caption { /* заголовок и ссылка  VIEW ALL */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+
+}
+
+.places_title {
+  margin-right: 15px;
+}
+
+.places_view-all {
+  font-size: 16px;
+  color: #006DFE;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+}
+
+.places_view-all:hover, .places_view-all:focus {
+  opacity: .65;
+}
+
+.places_cards { /* делаем сетку для картинок с местами на 6 ячеек (делится на 2 и на 3) */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.places_card { /* интерактивность картинок */
+  position: relative;
+}
+
+.places_card::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* порядок слоя */
+}
+
+.places_card-title {
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+  position: absolute;
+  bottom: 27px;
+  left: 29;
+  z-index: 3; /* порядок слоя */
+}
+
+.places_card_size_lg {
+  grid-column: span 3;
+}
+
+.places_card-pic { /* если картинки разных размеров */
+  width: 100%;
+  height: 354px; /* выравниваем по высоте */
+  object-fit: cover; /* масштаб в центр за счет краев */
+}
+
+
+
+
+/* Places styles end */
