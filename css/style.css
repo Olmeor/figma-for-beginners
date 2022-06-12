@@ -396,16 +396,18 @@ textarea {
 
 }
 
-html {
-  box-sizing: border-box; /* установка границ внутри контейнера */
+html { /* установка границ внутри контейнера */
+  box-sizing: border-box;
 }
 
-*, *::after, *::before {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body { /* первоначальные настройки для тела сайта */
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-size: 16px;
   line-height: 1.2;
@@ -413,9 +415,9 @@ body { /* первоначальные настройки для тела сай
   color: #102746;
 }
 
-.img {
+img {
   max-width: 100%; /* чтоб изображение не превышало размер контейнера в котором находится */
-  max-height: auto; /* чтоб сжималось пропорционально */
+  height: auto; /* чтоб сжималось пропорционально */
 }
 
 .wrapper { /*заметили, что header и заголовок выравнены по левой стороне */
@@ -439,16 +441,16 @@ body { /* первоначальные настройки для тела сай
 
 .section-title::after { /* подчеркиваем заголовок */
   display: block;
-  content: ''; /* чтоб псевдо-элемент появился на странице */
+  content: ""; /* чтоб псевдо-элемент появился на странице */
   width: 253px;
   height: 3px;
-  background-color: #006DFE;
+  background-color: #006dfe;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-/* header styles start */
+/* Header styles start */
 
 .header {
   /* background-color: #000;/* первоначально, чтоб белые буквы и лого видеть */
@@ -458,8 +460,8 @@ body { /* первоначальные настройки для тела сай
   width: 100%;
 }
 
-.header_wrapper { /* заполнение */
-  display: flex;
+.header_wrapper {
+  display: flex; /* заполнение */
   flex-wrap: wrap; /* перенос контента */
   align-items: flex-end; /* вертикальное выравнивание */
   justify-content: space-between; /* как располагать элементы */
@@ -482,12 +484,14 @@ body { /* первоначальные настройки для тела сай
 .header_link { /* оформляем меню */
   font-size: 18px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: white;
   text-decoration: none; /* убираем подчеркивание ссылок */
 }
 
-.header_link:hover, .header_link:focus, .header_link:active {
-  opacity: .75; /* добавление прозрачности */
+.header_link:hover,
+.header_link:focus,
+.header_link:active {
+  opacity: 0.75; /* добавление прозрачности */
 }
 
 /* Header styles end */
@@ -512,10 +516,10 @@ body { /* первоначальные настройки для тела сай
 }
 
 .intro_subtitle { /* надпись под заголовком */
+  max-width: 546px;
   color: white;
   font-size: 16px;
   line-height: 24px;
-  max-width: 546px;
   margin-bottom: 59px;
 }
 
@@ -526,10 +530,10 @@ body { /* первоначальные настройки для тела сай
 
 .search-form_field { /* вставляем маркер предварительно его почистив */
   width: 297px;
-  background: transparent url(../img/svg/circle-icon.svg) no-repeat left 6px;
+  background: transparent url(../img/svg/circle-ico.svg) no-repeat left 6px;
   background-size: 20px; /* на всякий случай ограничили размер */
   border: 0;
-  border-bottom: 2px solid #BFC0C5;
+  border-bottom: 2px solid #bfc0c5;
   margin-right: 60px;
   padding-left: 43px;
   padding-bottom: 22px;
@@ -541,7 +545,7 @@ body { /* первоначальные настройки для тела сай
 .search-form_field::placeholder { /* подсказка */
   font-weight: 500;
   font-size: 18px;
-  color: #fff;  
+  color: #fff;
 }
 
 .search-form_submit { /*кнопка search */
@@ -550,14 +554,17 @@ body { /* первоначальные настройки для тела сай
   font-weight: 500;
   font-size: 24px;
   color: white;
-  background: #1B7DFF;
+  background: #1b7dff;
   border: 0;
 }
 
-.search-form_submit:hover, .search-form_submit:focus, .search-form_submit:active {
-  background: #0c66da;
+.search-form_submit:hover,
+.search-form_submit:focus,
+.search-form_submit:active {
+  background: #0e66da;
 }
-/* Intro styles end*/
+
+/* Intro styles end */
 
 /* Benefits styles start */
 
@@ -573,8 +580,8 @@ body { /* первоначальные настройки для тела сай
   position: relative;
 }
 
-.benefits_title {
-  width: 100%; /* фон надписи на ширину родителя */
+.benefits_title { /* фон надписи на ширину родителя */
+  width: 100%;
   font-weight: 500;
   font-size: 35px;
   line-height: 42px;
@@ -583,7 +590,7 @@ body { /* первоначальные настройки для тела сай
   top: 0;
   left: 0;
   transform: translateY(-100%); /* подняли белый фон */
-  background-color: white;
+  background-color: #fff;
 }
 
 .benefits_cards { /* делаем сеткой */
@@ -602,8 +609,7 @@ body { /* первоначальные настройки для тела сай
   max-width: 66px;
   margin-bottom: 37px;
 }
-
-.benefits_card-tumb {
+.benefits_card-thumb {
   display: block; /* у SVG есть отступы, отключаем */
 }
 
@@ -625,14 +631,15 @@ body { /* первоначальные настройки для тела сай
   padding-right: 59px;
   font-size: 16px;
   line-height: 24px;
-  color: #006DFE;
+  color: #006dfe;
   text-decoration: none;
   background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
-  transition: .2s;
+  transition: 0.2s all;
   /* background-size: ; размер в данном случае = размер картинки */
 }
 
-.benefits_card-more:hover, .benefits_card-more:focus {
+.benefits_card-more:hover,
+.benefits_card-more:focus {
   background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
 }
 
@@ -643,13 +650,13 @@ body { /* первоначальные настройки для тела сай
 .places {
   margin-bottom: 131px;
 }
+
 .places_caption { /* заголовок и ссылка  VIEW ALL */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
-
 }
 
 .places_title {
@@ -658,13 +665,14 @@ body { /* первоначальные настройки для тела сай
 
 .places_view-all {
   font-size: 16px;
-  color: #006DFE;
+  color: #006dfe;
   text-decoration: none;
   padding-right: 59px;
   background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
 }
 
-.places_view-all:hover, .places_view-all:focus {
+.places_view-all:hover,
+.places_view-all:focus {
   opacity: .65;
 }
 
@@ -681,7 +689,7 @@ body { /* первоначальные настройки для тела сай
 
 .places_card::after {
   display: block;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: rgba(21, 24, 36, 0.4);
@@ -693,7 +701,6 @@ body { /* первоначальные настройки для тела сай
 
 .places_card:hover .places_card-pic {
   transform: scale(1.05); /* увеличение при наведении */
-
 }
 
 .places_card-title {
@@ -714,17 +721,17 @@ body { /* первоначальные настройки для тела сай
   grid-column: span 2;
 }
 
-.places_card-pic { /* если картинки разных размеров */
-  width: 100%;
-  transition: .15s all; /* плавность при увеличении при наведении */
+.places_card-pic {
+  width: 100%; /* если картинки разных размеров */
+  transition: 0.15s all; /* плавность при увеличении при наведении */
 }
 
-.places_card_size_lg {
+.places_card-pic_size_lg {
   height: 354px; /* выравниваем по высоте */
   object-fit: cover; /* масштаб в центр за счет краев */
 }
 
-.places_card_size_sm {
+.places_card-pic_size_sm {
   height: 283px; /* выравниваем по высоте */
   object-fit: cover; /* масштаб в центр за счет краев */
 }
@@ -742,75 +749,76 @@ body { /* первоначальные настройки для тела сай
 
 /* Tours styles start */
 
-.tours{
+.tours {
   margin-bottom: 139px;
 }
 
-.tours_tour{
+.tours_tour {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0 108px; 
+  grid-gap: 0 108px;
   align-items: center;
   margin-bottom: 77px;
 }
 
-.tour_info{
+.tour_info {
   padding-left: 47px;
 }
 
-.tour_title{
+.tour_title {
   font-weight: 500;
   font-size: 30px;
   line-height: 40px;
   margin-bottom: 85px;
 }
 
-.tour_desc{
+.tour_desc {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 58px;
 }
 
-.tour_more{
+.tour_more {
   font-size: 16px;
-  color: #006DFE;
+  color: #006dfe;
   text-decoration: none;
   padding-right: 59px;
   background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
 }
 
-.tour_more:hover, .tour_more:focus{
-  opacity: .65;
+.tour_more:hover,
+.tour_more:focus {
+  opacity: 0.65;
 }
 
 /* Tours styles end */
 
 /* Top places styles start */
 
-.top{
+.top {
   margin-bottom: 86px;
 }
-.top_title{
+.top_title {
   margin-bottom: 54px;
 }
 
-.top_cards{
+.top_cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 57px;
 }
 
-.top_card-pic{
+.top_card-pic {
   position: relative;
   margin-bottom: 45px;
 }
 
-.top_card{
+.top_card {
   display: flex;
   flex-direction: column;
 }
 
-.top_card-stats{
+.top_card-stats {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -823,15 +831,15 @@ body { /* первоначальные настройки для тела сай
   padding: 16px 25px;
 }
 
-.top_card-title{
+.top_card-title {
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   color: #fff;
-  margin: 0 auto 0 0 ;
+  margin: 0 auto 0 0;
 }
 
-.top_card-likes{
+.top_card-likes {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -841,7 +849,7 @@ body { /* первоначальные настройки для тела сай
   margin-right: 14px;
 }
 
-.top_card-comments{
+.top_card-comments {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -850,23 +858,25 @@ body { /* первоначальные настройки для тела сай
   background: url(../img/svg/comment-ico.svg) no-repeat right;
 }
 
-.top_card-desc{
+.top_card-desc {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 31px;
 }
 
-.top_card-more{
+.top_card-more {
   width: 118px;
   padding: 12px 19px;
-  background: #006DFE;
+  background: #006dfe;
   text-decoration: none;
   color: #fff;
   font-size: 16px;
-  margin: auto 0 0 0 ;
+  margin: auto 0 0 0;
 }
 
-.top_card-more:hover, .top_card-more:focus, .top_card-more:active{
+.top_card-more:hover,
+.top_card-more:focus,
+.top_card-more:active {
   background: #0e66da;
 }
 
